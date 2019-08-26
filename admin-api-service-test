@@ -1,0 +1,14 @@
+# this is the port on which our admin-api-service will run
+server.port=8282
+
+# allow for RefreshScope
+management.endpoints.web.exposure.include=*
+
+spring.datasource.url: jdbc:mysql://localhost:3306/spring_security_test?useSSL=false&allowPublicKeyRetrieval=true
+spring.datasource.username: root
+spring.datasource.password: password
+spring.datasource.driver-class-name: com.mysql.jdbc.Driver
+
+
+# Run in terminal as: curl localhost:8282/actuator/refresh -d {} -H "Content-Type: application/json"
+# This will allow refresh
